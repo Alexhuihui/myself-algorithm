@@ -13,3 +13,9 @@ that occupy the rest of the list. Initially, the sorted sublist is empty and the
 The algorithm proceeds by finding the smallest (or largest, depending on sorting order) element in the unsorted sublist,
 exchanging (swapping) it with the leftmost unsorted element (putting it in sorted order), 
 and moving the sublist boundaries one element to the right.
+
+
+##### insertion sort
+From Wikipedia: Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
+
+

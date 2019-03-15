@@ -4,7 +4,6 @@ import domain.Student;
 
 import static sortBasic.SortUtils.less;
 import static sortBasic.SortUtils.print;
-import static sortBasic.SortUtils.swap;
 
 /**
  * InsertionSort
@@ -22,13 +21,15 @@ public class InsertionSort implements SortAlgorithm {
     public <T extends Comparable<T>> T[] sort(T[] unsorted) {
 
         for (int i = 1; i < unsorted.length; i++) {
-            for (int j = i; j >= 1; j--) {
-                if (less(unsorted[j], unsorted[j - 1])) {
-                    swap(unsorted, j, j - 1);
-                } else {
-                    break;
-                }
+
+            T key = unsorted[i];
+            int j;
+
+            for (j = i; j >= 1 && less(key, unsorted[j - 1]); j--) {
+                unsorted[j] = unsorted[j - 1];
             }
+
+            unsorted[j] = key;
         }
 
         return unsorted;
