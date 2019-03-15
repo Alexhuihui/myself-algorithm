@@ -1,5 +1,7 @@
 package sortBasic;
 
+import domain.Student;
+
 import static sortBasic.SortUtils.less;
 import static sortBasic.SortUtils.print;
 import static sortBasic.SortUtils.swap;
@@ -38,6 +40,14 @@ public class InsertionSort implements SortAlgorithm {
 
         InsertionSort insertionSort = new InsertionSort();
         print(insertionSort.sort(arr));
+
+        Student[] unSortedStudents = new Student[]{new Student("alex", 1),
+                new Student("wyh", 3),
+                new Student("xu", 3),
+                new Student("wyh", 3),
+                new Student("cold", 4)};
+
+        print(insertionSort.sort(unSortedStudents));
 
     }
 }
